@@ -51,7 +51,7 @@ module PersonalApi
       g.javascripts = false
       g.helper = false
     end
-    config.autoload_paths += %W(\#{config.rot/lib})
+    config.autoload_paths << Rails.root.join('lib')
     config.api_only = true
   end
 end
