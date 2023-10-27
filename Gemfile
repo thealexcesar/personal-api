@@ -21,6 +21,7 @@ gem 'tzinfo-data', platforms: %i[mswin mswin64 mingw x64_mingw jruby]
 
 group :development, :test do
   gem 'debug', platforms: %i[mri mswin mswin64 mingw x64_mingw]
+  gem 'factory_bot_rails', '~> 6.2'
   gem 'ffaker', '~> 2.23'
   gem 'rspec-rails'
   gem 'rswag-specs'
