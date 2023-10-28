@@ -8,9 +8,13 @@ Rails.application.routes.draw do
 
   get 'up' => 'rails/health#show', as: :rails_health_check
 
-  namespace :api, defaults: { format: :json }, constraints: { subdomain: 'api' }, path: '/' do
+  namespace :api, defaults: { format: :json } do # TODO: , constraints: { subdomain: 'api' }, path: '/' do
     # scope module: :v1, constraints: ApiConstraints.new(version: 1, default: true) do
     # todo: resources :users, only: %i[show create update destroy]
     # end
+    namespace :v1, constraints: ApiConstraints.new(version: 1, default: true) do
+      resources :users, only: [:index, :show]
+    end
   end
+
 end
