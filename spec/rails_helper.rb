@@ -3,11 +3,14 @@
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 require_relative '../config/environment'
+require 'support/shoulda_matchers'
 abort('The Rails environment is running in production mode!') if Rails.env.production?
 ENV['RAILS_ENV'] ||= 'test'
-require_relative '../config/environment'
 abort('The Rails environment is running in production mode!') if Rails.env.production?
 require 'rspec/rails'
+
+rails_support_path = Rails.root.join('spec', 'support', '**', '*.rb')
+Dir[rails_support_path].each { |file| require file }
 
 if ENV['RAILS_ENV'] == 'test'
   require 'simplecov'
