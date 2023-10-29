@@ -9,6 +9,11 @@ RSpec.describe Api::V1::UsersController, type: :controller do
     end
 
     it 'returns info about report users' do
+      expect(User.all)
+      puts response.body
+    end
+
+    it 'returns info about user' do
       puts response.body
       user_response = JSON.parse(response.body, symbolize_names: true)
       expect(user_response[:email]).to eq(@user.email)

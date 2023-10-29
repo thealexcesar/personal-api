@@ -1,4 +1,4 @@
-# Resume Blog API
+# Personal API
 
 A personal API for powering a blog and resume generator. This API provides resources to create, manage, and generate content.
 
@@ -14,7 +14,7 @@ A personal API for powering a blog and resume generator. This API provides resou
    Use the following command to clone the repository to your local machine:
 
 ```bash
-https://github.com/thealexcesar/personal-api.git
+git clone https://github.com/thealexcesar/personal-api.git
 ```
 
 ****
@@ -25,7 +25,6 @@ bundle install
 ```
 
 Install the required dependencies using Bundler:
-
 
 3. **Create a Database:**
 
